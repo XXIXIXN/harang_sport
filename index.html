@@ -2,15 +2,235 @@
 <html>
     <head>
         <style>
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+ 
+            @font-face {
+                font-family: 'Pretendard-Regular';
+                src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+                font-weight: 300;
+                font-style: normal;
             }
+            @font-face {
+                font-family: 'Pretendard-ExtraBold';
+                src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+                font-weight: 800;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'GmarketSansMedium';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'GmarketSansBold';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            body {
+                width: auto;
+                height: auto;
+                background-color: black;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .logo-ani_div {
+                padding-left: 100px;
+                padding-top: 70px;
+                height: 100px;
+            }
+
+            @keyframes logo-ani_h {
+                0% { transform: translate(-140px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_h {
+                animation-name: logo-ani_h;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_a1 {
+                0% { transform: translate(-90px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_a1 {
+                animation-name: logo-ani_a1;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_r {
+                0% { transform: translate(-40px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_r {
+                animation-name: logo-ani_r;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_a2 {
+                0% { transform: translate(0, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; }
+            }
+            .logo_a2 {
+                animation-name: logo-ani_a2;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_n {
+                0% { transform: translate(+55px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_n {
+                animation-name: logo-ani_n;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_g {
+                0% { transform: translate(+100px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_g {
+                position: absolute;
+                padding-left: 5px;
+                padding-top: 52px;
+                animation-name: logo-ani_g;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes slogan-ani {
+                0% { transform: translate(+100px, 0); opacity: 0; }
+                50% { transform: translate(+100px, 0); opacity: 0; }
+                100% { transform: translate(px, 0px); opacity: 1; }
+            }
+            .sloganDiv {
+                font-family: 'GmarketSansMedium';
+                color: white;
+                font-size: 45px;
+                margin-top: -85px;
+                margin-left: 570px;
+
+                animation-name: slogan-ani;
+                animation-duration: 1.9s;
+            }
+            .sloganDiv1 {
+                font-family: 'GmarketSansBold';
+            }
+            .sloganDiv2 {
+                margin-top: -5px;
+                font-size: 30px;
+            }
+
+            .header {
+                margin-top: 50px;
+                margin-left: 51px;
+                width: auto;
+                height: 22px;
+                color: white;
+                /*border: 1px solid white;*/
+                display: flex;
+                font-family: 'Pretendard-Regular';
+                font-size: 18px;
+            }
+            .headerDiv1 {
+                display: flex;
+                width: 700px;
+            }
+            .koreaDiv {
+                background-color: white;
+                color: black;
+            }
+            .headerMenuDiv {
+                display: flex;
+                margin-right: 130px;
+            }
+            .headermenu {
+                width: 50px;
+                margin-left: 120px;
+            }
+            .headermenu:hover {
+                font-family: 'Pretendard-ExtraBold';
+                text-decoration: underline 2px;
+                text-underline-position : under;
+            }
+            
+            .dropbtn {
+                border: none;
+                cursor: pointer;
+            }
+            .dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                margin-top: 8px;
+                font-size: 12px;
+                text-align: center; 
+                display: none;
+                background-color: #f9f9f9;
+                min-width: 70px;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 7px 7px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+                font-family: 'Pretendard-ExtraBold';
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .GlobeImg {
+                margin-left: 15px;
+                margin-right: 30px;
+            }
+
+
         </style>
     </head>
     <body>
-        <img src="./image/a.png">
+        
+        <div class="header">
+            <div class="headerDiv1">MADE&nbsp;IN&nbsp;&nbsp;<div class="koreaDiv">KOREA&nbsp;</div></div>
+            <div class="headerMenuDiv">
+                <div class="headermenu"><a href="">HOME</a></div>
+                <div class="headermenu"><a href="">ABOUT</a></div>
+                <div class="headermenu"><a href="">PRODUCT</a></div>
+                <div class="headermenu"><a href="">CV</a></div>
+            </div>
+            <div class="lanmenu">
+                <div class="dropdown">
+                    <div class="dropbtn">Language</div>
+                        <div class="dropdown-content">
+                            <a href="#">English</a>
+                            <a href="#">Español</a>
+                            <a href="#">한국어</a>
+                        </div>
+                </div>
+            </div>
+            <img src="./image/Globe.png" class="GlobeImg">
+        </div>
+        <div class="logo-ani_div">
+            <img src="./image/h.png" class="logo_h">
+            <img src="./image/a.png" class="logo_a1">
+            <img src="./image/r.png" class="logo_r">
+            <img src="./image/a.png" class="logo_a2">
+            <img src="./image/n.png" class="logo_n">
+            <img src="./image/g.png" class="logo_g">
+
+            <div class="sloganDiv">
+                <div class="sloganDiv1">SIGNATURE SLOGAN</div>
+                <div class="sloganDiv2">PREMIUM SPORTS VALUE</div>
+            </div>
+        </div>
     </body>
 
 </html>
