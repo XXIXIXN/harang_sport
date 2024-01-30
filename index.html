@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <style>
  
             @font-face {
@@ -37,11 +38,18 @@
                 text-decoration: none;
                 color: white;
             }
+            .empty {
+                margin-top: 200px;
+                height: 500px;
+                color: white;
+                text-align: center;
+            }
 
             .logo-ani_div {
                 padding-left: 100px;
                 padding-top: 70px;
                 height: 100px;
+                display: block;
             }
 
             @keyframes logo-ani_h {
@@ -193,6 +201,134 @@
                 margin-right: 30px;
             }
 
+            
+            .showcaseDiv {
+                text-align: center;
+                height: 560px;
+                margin-top: 110px;
+                margin-left: 55px;
+                margin-right: 50px;
+            }
+            .slider{
+                height: 560px;
+                position: relative;
+                margin: 0 auto;
+            }
+            .sliderImg {
+                width: 1500px;
+                height: 560px;
+            }
+            .slider input[type=radio]{
+                display: none;
+            }
+            ul.imgs{
+                display: flex;
+                justify-content: center;
+                height: 500px;
+                padding: 0;
+                margin: 0;
+            }
+            ul.imgs li{
+                height: 500px;
+                position: absolute; /* 슬라이드가 겹쳐서 모여야 하므로 absolute 속성으로 배치 */
+                opacity: 0; /* 체크한 라디오박스 순서의 슬라이드만 표시되도록 기본 투명도 설정 */
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .bullets{
+                position: absolute;
+                left: 50%; /* 가로로 가운데 정렬 */
+                transform: translateX(-50%);
+                bottom: 20px; /* 슬라이드 밑에서 20px 간격 띄움 */
+                z-index: 2; /* 슬라이드 위에 보이도록 레이어 순위를 높임 */
+            }
+            .bullets label{
+                display: inline-block; /* 한 줄로 불릿 나열*/
+                border-radius: 50%; /* 원형 불릿으로 처리 */
+                background-color: rgba(255, 255, 255, 0.55);
+                width: 10px; /* 불릿 너비 */
+                height: 10px; /* 불릿 높이 */
+                cursor: pointer;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+            .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+                background-color: #fff;
+            }
+            .slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+                background-color: #fff;
+            }
+            .slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+                background-color: #fff;
+            }
+            .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+                opacity: 1;
+                transition: 1s;
+                z-index: 1;
+            }
+            .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+                opacity: 1;
+                transition: 1s;
+                z-index: 1;
+            }
+            .slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+                opacity: 1;
+                transition: 1s;
+                z-index: 1;
+            }
+
+            .sigProdTitleDiv {
+                font-family: 'GmarketSansBold';
+                color: white;
+                font-size: 40px;
+                margin-left: 100px;
+                margin-top: 300px;
+            }
+            .sigProdDiv {
+                display: flex;
+                margin-top: 30px;
+                margin-left: 105px;
+                margin-right: 100px;
+            }
+            .sigProdImg {
+                width: 425px;
+                height: 425px;
+                margin-right: 100px;
+            }
+            .sigProdSpan1, .sigProdSpan2 {
+                text-align: left;
+                color: white;
+            }
+            .sigProdSpan1 {
+                font-family: 'Pretendard-ExtraBold';
+            }
+            .sigProdSpan2 {
+                font-family: 'Pretendard-Regular';
+            }
+            .sigProdSpan3 {
+                font-family: 'Pretendard-Regular';
+                background-color: white;
+            }
+            .sigProdDiv1 a:hover img {
+                -webkit-transition: .2s ease-in-out;
+	            transition: .2s ease-in-out;
+                -webkit-filter: blur(3px);
+	            filter: blur(3px);
+            }
+            .sigProdDiv2 a:hover img {
+                -webkit-transition: .2s ease-in-out;
+	            transition: .2s ease-in-out;
+                -webkit-filter: blur(3px);
+	            filter: blur(3px);
+            }
+            .sigProdDiv3 a:hover img {
+                -webkit-transition: .2s ease-in-out;
+	            transition: .2s ease-in-out;
+                -webkit-filter: blur(3px);
+	            filter: blur(3px);
+            }
+
 
         </style>
         <title>Harang Sports</title>
@@ -228,10 +364,66 @@
             <img src="./image/g.png" class="logo_g">
 
             <div class="sloganDiv">
-                <div class="sloganDiv1">SIGNATURE SLOGAN</div>
-                <div class="sloganDiv2">PREMIUM SPORTS VALUE</div>
+                <div class="sloganDiv1">PREMIUM SPORTS VALUE</div>
+                <div class="sloganDiv2">MAKE A K TURN AND GO FISHING</div>
             </div>
         </div>
+
+        <div class="showcaseDiv">
+
+            <div class="slider">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <ul id="imgholder" class="imgs">
+                    <li><img src="./image/f1.jpg" class="sliderImg"></li>
+                    <li><img src="./image/f2.jpg" class="sliderImg"></li>
+                    <li><img src="./image/f3.jpg" class="sliderImg"></li>
+                </ul>
+                <div class="bullets">
+                    <label for="slide1">&nbsp;</label>
+                    <label for="slide2">&nbsp;</label>
+                    <label for="slide3">&nbsp;</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sigProdTitleDiv">SIGNATURE PRODUCT</div>
+        <div class="sigProdDiv">
+            <div class="sigProdDiv1">
+                <a href="#"><img src="./image/f11.jpg" class="sigProdImg"></a><br><br>
+                <span class="sigProdSpan1">ITEM 1</span><br>
+                <span class="sigProdSpan2">Type Description</span><br><br>
+                <span class="sigProdSpan3">PRICE CODE</span>
+            </div>
+            <div class="sigProdDiv2">
+                <a href="#"><img src="./image/f22.jpg" class="sigProdImg"></a><br><br>
+                <span class="sigProdSpan1">ITEM 2</span><br>
+                <span class="sigProdSpan2">Type Description</span><br><br>
+                <span class="sigProdSpan3">PRICE CODE</span>
+            </div>
+            <div class="sigProdDiv3">
+                <a href="#"><img src="./image/f33.jpg" class="sigProdImg"></a><br><br>
+                <span class="sigProdSpan1">ITEM 3</span><br>
+                <span class="sigProdSpan2">Type Description</span><br><br>
+                <span class="sigProdSpan3">PRICE CODE</span>
+            </div>
+        </div>
+        <div class="empty">Developing</div>
+
+        <script>
+            function changeSlide() {
+        const radios = document.getElementsByName("slide");
+        let currentIndex = Array.from(radios).findIndex(radio => radio.checked);
+        currentIndex = (currentIndex + 1) % radios.length;
+        radios[currentIndex].checked = true;
+    }
+
+    setInterval(changeSlide, 5000); // Change slide every 3 seconds
+
+        </script>
+
     </body>
 
 </html>
