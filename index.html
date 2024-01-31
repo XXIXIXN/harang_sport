@@ -45,10 +45,17 @@
                 text-align: center;
             }
 
+            .logo-ani_div1 {
+                width: 500px;
+                display: block;
+                margin-left: -495px;
+                margin-right: 70px;
+                margin-top: -20px;
+            }
+
             .logo-ani_div {
-                padding-left: 100px;
                 padding-top: 70px;
-                height: 100px;
+                height: 50px;
                 display: block;
             }
 
@@ -57,6 +64,7 @@
                 100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
             }
             .logo_h {
+                width: 40px;
                 animation-name: logo-ani_h;
                 animation-duration: 1.3s;
             }
@@ -66,6 +74,7 @@
                 100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
             }
             .logo_a1 {
+                width: 40px;
                 animation-name: logo-ani_a1;
                 animation-duration: 1.3s;
             }
@@ -75,6 +84,7 @@
                 100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
             }
             .logo_r {
+                width: 31px;
                 animation-name: logo-ani_r;
                 animation-duration: 1.3s;
             }
@@ -84,6 +94,7 @@
                 100% { transform: translate(0px, 0px); opacity: 1; }
             }
             .logo_a2 {
+                width: 40px;
                 animation-name: logo-ani_a2;
                 animation-duration: 1.3s;
             }
@@ -93,6 +104,7 @@
                 100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
             }
             .logo_n {
+                width: 40px;
                 animation-name: logo-ani_n;
                 animation-duration: 1.3s;
             }
@@ -102,9 +114,10 @@
                 100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
             }
             .logo_g {
+                width: 40px;
                 position: absolute;
                 padding-left: 5px;
-                padding-top: 52px;
+                padding-top: 26px;
                 animation-name: logo-ani_g;
                 animation-duration: 1.3s;
             }
@@ -118,9 +131,8 @@
                 font-family: 'GmarketSansMedium';
                 color: white;
                 font-size: 45px;
-                margin-top: -85px;
-                margin-left: 570px;
-
+                margin-left: 107px;
+                margin-top: 100px;
                 animation-name: slogan-ani;
                 animation-duration: 1.9s;
             }
@@ -128,14 +140,27 @@
                 font-family: 'GmarketSansBold';
             }
             .sloganDiv2 {
-                margin-top: -5px;
+                margin-top: 8px;
                 font-size: 30px;
             }
+            .sloganDiv:hover {
+                font-style: italic;
+                -webkit-transition: 1.5s ease-in;
+	            transition: 1.5s ease-in;
+            }
 
+            .head {
+                top: 0;
+                left: 0;
+                width: 100%;
+	            z-index: 100;
+                background-color: black;
+                height: 120px;
+                position: fixed;
+            }
             .header {
                 margin-top: 50px;
                 margin-left: 51px;
-                width: auto;
                 height: 22px;
                 color: white;
                 /*border: 1px solid white;*/
@@ -145,7 +170,7 @@
             }
             .headerDiv1 {
                 display: flex;
-                width: 700px;
+                border: 1px solid white;
             }
             .koreaDiv {
                 background-color: white;
@@ -153,6 +178,7 @@
             }
             .headerMenuDiv {
                 display: flex;
+                margin-left: 550px;
                 margin-right: 130px;
             }
             .headermenu {
@@ -179,11 +205,11 @@
                 text-align: center; 
                 display: none;
                 background-color: #f9f9f9;
-                min-width: 70px;
+                min-width: 112px;
             }
             .dropdown-content a {
                 color: black;
-                padding: 7px 7px;
+                padding: 7px 15px;
                 text-decoration: none;
                 display: block;
             }
@@ -197,22 +223,24 @@
             }
 
             .GlobeImg {
-                margin-left: 15px;
+                width: 23px;
+                position: absolute;
+                margin-left: 1525px;
                 margin-right: 30px;
             }
 
             
             .showcaseDiv {
-                text-align: center;
+                width: 1500px;
                 height: 560px;
-                margin-top: 110px;
-                margin-left: 55px;
+                margin-top: 200px;
+                margin-left: 92px;
                 margin-right: 50px;
             }
             .slider{
+                width: 1500px;
                 height: 560px;
                 position: relative;
-                margin: 0 auto;
             }
             .sliderImg {
                 width: 1500px;
@@ -225,33 +253,31 @@
                 display: flex;
                 justify-content: center;
                 height: 500px;
-                padding: 0;
-                margin: 0;
             }
             ul.imgs li{
                 height: 500px;
                 position: absolute; /* 슬라이드가 겹쳐서 모여야 하므로 absolute 속성으로 배치 */
                 opacity: 0; /* 체크한 라디오박스 순서의 슬라이드만 표시되도록 기본 투명도 설정 */
                 list-style: none;
-                padding: 0;
-                margin: 0;
             }
             .bullets{
                 position: absolute;
-                left: 50%; /* 가로로 가운데 정렬 */
+                left: 51.3%; /* 가로로 가운데 정렬 */
                 transform: translateX(-50%);
-                bottom: 20px; /* 슬라이드 밑에서 20px 간격 띄움 */
+                bottom: 30px; /* 슬라이드 밑에서 20px 간격 띄움 */
                 z-index: 2; /* 슬라이드 위에 보이도록 레이어 순위를 높임 */
+                width: 1500px;
             }
             .bullets label{
+                position:relative;
                 display: inline-block; /* 한 줄로 불릿 나열*/
                 border-radius: 50%; /* 원형 불릿으로 처리 */
                 background-color: rgba(255, 255, 255, 0.55);
                 width: 10px; /* 불릿 너비 */
                 height: 10px; /* 불릿 높이 */
                 cursor: pointer;
-                margin-left: 100px;
-                margin-right: 100px;
+                margin-left: 240px;
+                margin-right: 240px;
             }
             .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
                 background-color: #fff;
@@ -276,6 +302,88 @@
                 opacity: 1;
                 transition: 1s;
                 z-index: 1;
+            }
+
+            @keyframes bullet-ani {
+                0% { transform: scale(0); opacity: 0; }
+                100% { transform: scale(1); opacity: 1; }
+            }
+            .bullets1 {
+                position: absolute;
+                left: 51.3%; /* 가로로 가운데 정렬 */
+                transform: translateX(-50%);
+                bottom: 23px; /* 슬라이드 밑에서 20px 간격 띄움 */
+                z-index: 2; /* 슬라이드 위에 보이도록 레이어 순위를 높임 */
+                width: 1500px;
+            }
+            .bullets1 label{
+                position:relative;
+                display: inline-block; /* 한 줄로 불릿 나열*/
+                border-radius: 50%; /* 원형 불릿으로 처리 */
+                border: 1px solid white;
+                width: 40px; /* 불릿 너비 */
+                height: 40px; /* 불릿 높이 */
+                cursor: pointer;
+                margin-left: 224px;
+                margin-right: 224px;
+            }
+            .slider input[type=radio]:nth-child(1):checked~.bullets1>label:nth-child(1){
+                animation-name: bullet-ani;
+                animation-duration: 1.3s;
+            }
+            .slider input[type=radio]:nth-child(2):checked~.bullets1>label:nth-child(2){
+                animation-name: bullet-ani;
+                animation-duration: 1.3s;
+            }
+            .slider input[type=radio]:nth-child(3):checked~.bullets1>label:nth-child(3){
+                animation-name: bullet-ani;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes progressbar-ani1 {
+                0% { width: 0px }
+                100% { width: 33% }
+            }
+            @keyframes progressbar-ani2 {
+                0% { width: 33% }
+                100% { width: 66% }
+            }
+            @keyframes progressbar-ani3 {
+                0% { width: 66% }
+                100% { width: 100% }
+            }
+            .progressbar {
+                position: absolute;
+                left: 50.7%; /* 가로로 가운데 정렬 */
+                transform: translateX(-50%);
+                bottom: 30px; /* 슬라이드 밑에서 20px 간격 띄움 */
+                z-index: 2; /* 슬라이드 위에 보이도록 레이어 순위를 높임 */
+                width: 1000px;
+                background-color: rgba(255, 255, 255, 0.501);
+                height: 1.5px; /* 불릿 높이 */
+            }
+            .progressbar label{
+                position:relative;
+                display: inline-block; /* 한 줄로 불릿 나열*/
+                background-color: rgb(255, 255, 255);
+                height: 1.5px; /* 불릿 높이 */
+                cursor: pointer;
+                margin-left: -6px;
+            }
+            .slider input[type=radio]:nth-child(1):checked~.progressbar>label:nth-child(1){
+                animation-name: progressbar-ani1;
+                animation-duration: 1.3s;
+                animation-fill-mode: forwards;
+            }
+            .slider input[type=radio]:nth-child(2):checked~.progressbar>label:nth-child(2){
+                animation-name: progressbar-ani2;
+                animation-duration: 1.3s;
+                animation-fill-mode: forwards;
+            }
+            .slider input[type=radio]:nth-child(3):checked~.progressbar>label:nth-child(3){
+                animation-name: progressbar-ani3;
+                animation-duration: 1.3s;
+                animation-fill-mode: forwards;
             }
 
             .sigProdTitleDiv {
@@ -329,15 +437,49 @@
 	            filter: blur(3px);
             }
 
+            .footer {
+                width: 1650px;
+                height: 140px;
+                color: white;
+                margin-top: 500px;
+                display: flex;
+            }
+            .footLogoImg {
+                margin-left: 60px;
+            }
+            .footLogoText {
+                font-family: 'Pretendard-Regular';
+                margin-top: 18px;
+                margin-left: 10px;
+            }
+            .footLogoText > span {
+                font-family: 'Pretendard-ExtraBold';
+            }
+            .footContLogoDiv {
+                margin-left: 780px;
+            }
+            .footContLogoImg {
+                width: 57px;
+                margin-left: 25px;
+            }
+
 
         </style>
         <title>Harang Sports</title>
     </head>
     <body>
-        
+        <div class="head">
         <div class="header">
-            <div class="headerDiv1">MADE&nbsp;IN&nbsp;&nbsp;<div class="koreaDiv">KOREA&nbsp;</div></div>
             <div class="headerMenuDiv">
+                <div class="logo-ani_div1">
+                    <img src="./image/h.png" class="logo_h">
+                    <img src="./image/a.png" class="logo_a1">
+                    <img src="./image/r.png" class="logo_r">
+                    <img src="./image/a.png" class="logo_a2">
+                    <img src="./image/n.png" class="logo_n">
+                    <img src="./image/g.png" class="logo_g">
+                </div>
+
                 <div class="headermenu"><a href="">HOME</a></div>
                 <div class="headermenu"><a href="">ABOUT</a></div>
                 <div class="headermenu"><a href="">PRODUCT</a></div>
@@ -345,7 +487,7 @@
             </div>
             <div class="lanmenu">
                 <div class="dropdown">
-                    <div class="dropbtn">Language</div>
+                    <div class="dropbtn" onclick="dropbtn()">Language</div>
                         <div class="dropdown-content">
                             <a href="#">English</a>
                             <a href="#">Español</a>
@@ -355,14 +497,8 @@
             </div>
             <img src="./image/Globe.png" class="GlobeImg">
         </div>
+        </div>
         <div class="logo-ani_div">
-            <img src="./image/h.png" class="logo_h">
-            <img src="./image/a.png" class="logo_a1">
-            <img src="./image/r.png" class="logo_r">
-            <img src="./image/a.png" class="logo_a2">
-            <img src="./image/n.png" class="logo_n">
-            <img src="./image/g.png" class="logo_g">
-
             <div class="sloganDiv">
                 <div class="sloganDiv1">PREMIUM SPORTS VALUE</div>
                 <div class="sloganDiv2">MAKE A K TURN AND GO FISHING</div>
@@ -381,6 +517,16 @@
                     <li><img src="./image/f3.jpg" class="sliderImg"></li>
                 </ul>
                 <div class="bullets">
+                    <label for="slide1">&nbsp;</label>
+                    <label for="slide2">&nbsp;</label>
+                    <label for="slide3">&nbsp;</label>
+                </div>
+                <div class="bullets1">
+                    <label for="slide1">&nbsp;</label>
+                    <label for="slide2">&nbsp;</label>
+                    <label for="slide3">&nbsp;</label>
+                </div>
+                <div class="progressbar">
                     <label for="slide1">&nbsp;</label>
                     <label for="slide2">&nbsp;</label>
                     <label for="slide3">&nbsp;</label>
@@ -412,15 +558,31 @@
         </div>
         <div class="empty">Developing</div>
 
-        <script>
-            function changeSlide() {
-        const radios = document.getElementsByName("slide");
-        let currentIndex = Array.from(radios).findIndex(radio => radio.checked);
-        currentIndex = (currentIndex + 1) % radios.length;
-        radios[currentIndex].checked = true;
-    }
+        <div class="footer">
+            <div><img src="./image/LOGO(3D).png" class="footLogoImg"></div>
+            <div class="footLogoText">SPORTS & OUTDOORS INC.<br><span>MADE IN KOREA</span></div>
+            <div class="footContLogoDiv">
+                <a href=""><img src="./image/icon1.png" class="footContLogoImg"></a>
+                <a href=""><img src="./image/EMAIL.png" class="footContLogoImg"></a>
+                <a href=""><img src="./image/INSTAGRAM.png" class="footContLogoImg"></a>
+                <a href=""><img src="./image/YOUTUBE.png" class="footContLogoImg"></a>
+            </div>
+        </div>
 
-    setInterval(changeSlide, 5000); // Change slide every 3 seconds
+        <script>
+
+            function changeSlide() {
+                const radios = document.getElementsByName("slide");
+                let currentIndex = Array.from(radios).findIndex(radio => radio.checked);
+                currentIndex = (currentIndex + 1) % radios.length;
+                radios[currentIndex].checked = true;
+            }
+
+            setInterval(changeSlide, 5000); // Change slide every 3 seconds
+
+            function dropbtn() {
+                $(".dropdown-content").show();
+            }
 
         </script>
 
