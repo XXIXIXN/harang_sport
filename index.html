@@ -54,7 +54,6 @@
 
 
             .logo-ani_div1 {
-    width: 500px;
     display: block;
     margin-top: -20px;
     position: fixed; /* 고정 위치로 설정 */
@@ -224,7 +223,7 @@
                 font-family: 'GmarketSansMedium';
                 color: white;
                 font-size: 45px;
-                margin-left: 97px;
+                margin-left: 60px;
                 margin-top: 100px;
                 animation-name: slogan-ani;
                 animation-duration: 1.9s;
@@ -236,42 +235,28 @@
                 margin-top: 8px;
                 font-size: 30px;
             }
-            .sloganDiv:hover {
-                font-style: italic;
-                -webkit-transition: 1.5s ease-in;
-	            transition: 1.5s ease-in;
-            }
 
             .showcaseDiv {
-    margin-left: 2%; /* 변경된 부분: 좌측 여백 조절 */
-    margin-right: 2%; /* 변경된 부분: 우측 여백 조절 */
-    width: 96%;
-    max-width: 1500px;
+    width: 97%;
     margin: 200px auto;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
 }
 
 .slider {
-    max-width: 100%;
     width: 100%;
     height: 100%;
     position: relative;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
 }
 
 .sliderImg {
     width: 100%;
-    height: 100%;
+    height: 590px;
     object-fit: cover;
-    max-width: 1500px;
 }
-
-
-
-/* 나머지 코드는 동일하게 유지됩니다. */
 
             .slider input[type=radio]{
                 display: none;
@@ -291,9 +276,9 @@
                 position: absolute;
                 left: 51%; /* 가로로 가운데 정렬 */
                 transform: translateX(-50%);
-                bottom: 40px; /* 슬라이드 밑에서 20px 간격 띄움 */
+                bottom: 10px; /* 슬라이드 밑에서 20px 간격 띄움 */
                 z-index: 2; /* 슬라이드 위에 보이도록 레이어 순위를 높임 */
-                width: 1500px;
+                width: 100%;
             }
             .bullets label{
                 position:relative;
@@ -303,8 +288,8 @@
                 width: 10px; /* 불릿 너비 */
                 height: 10px; /* 불릿 높이 */
                 cursor: pointer;
-                margin-left: 240px;
-                margin-right: 240px;
+                margin-left: 15%;
+                margin-right: 15%;
             }
             .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
                 background-color: #fff;
@@ -337,11 +322,11 @@
             }
             .bullets1 {
                 position: absolute;
-                left: 51%; /* 가로로 가운데 정렬 */
+                left: 51.7%; /* 가로로 가운데 정렬 */
                 transform: translateX(-50%);
-                bottom: 34px; /* 슬라이드 밑에서 20px 간격 띄움 */
+                bottom: 4px; /* 슬라이드 밑에서 20px 간격 띄움 */
                 z-index: 2; /* 슬라이드 위에 보이도록 레이어 순위를 높임 */
-                width: 1500px;
+                width: 120%;
             }
             .bullets1 label{
                 position:relative;
@@ -351,8 +336,9 @@
                 width: 40px; /* 불릿 너비 */
                 height: 40px; /* 불릿 높이 */
                 cursor: pointer;
-                margin-left: 224px;
-                margin-right: 224px;
+                left: 4%;
+                margin-left: 14%;
+                margin-right: 14%;
             }
             .slider input[type=radio]:nth-child(1):checked~.bullets1>label:nth-child(1){
                 animation-name: bullet-ani;
@@ -368,7 +354,7 @@
             }
 
             @keyframes progressbar-ani1 {
-                0% { width: 0px }
+                0% { width: 0% }
                 100% { width: 33% }
             }
             @keyframes progressbar-ani2 {
@@ -377,15 +363,14 @@
             }
             @keyframes progressbar-ani3 {
                 0% { width: 66% }
-                100% { width: 100% }
+                100% { width: 99.9% }
             }
             .progressbar {
                 position: absolute;
-                left: 50.7%; /* 가로로 가운데 정렬 */
+                left: 51.7%; /* 가로로 가운데 정렬 */       
                 transform: translateX(-50%);
-                bottom: 20px; /* 슬라이드 밑에서 20px 간격 띄움 */
                 z-index: 2; /* 슬라이드 위에 보이도록 레이어 순위를 높임 */
-                width: 1000px;
+                width: 75%;
                 background-color: rgba(255, 255, 255, 0.501);
                 height: 1.5px; /* 불릿 높이 */
             }
@@ -418,7 +403,6 @@
     color: white;
     font-size: 40px;
     margin-left: 100px;
-    margin-top: 300px;
 }
 
 .sigProdDiv {
@@ -439,21 +423,19 @@
     aspect-ratio: 1 / 1;
 }
 
-.aboutDiv1 {
-    display: flex;
-    margin-top: 30px;
-    margin-left: 100px; /* 원하는 픽셀값으로 조절 */
-}
-.aboutDiv1 > div {
-    flex: 1;
-    margin-right: 5%;
-}
-.aboutImg {
+.strongDiv {
     width: 100%;
-    height: auto;
+    margin: 400px auto;
+    margin-bottom: 250px;
+    box-sizing: border-box;
+}
+.strongImg {
     max-width: 100%;
-    aspect-ratio: 1 / 1;
-    opacity: .6;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 
@@ -469,7 +451,7 @@
             }
             .sigProdSpan3 {
                 font-family: 'Pretendard-Regular';
-                background-color: white;
+                color: #ffed28;
             }
             .sigProdDiv1 a:hover img {
                 -webkit-transition: .2s ease-in-out;
@@ -568,12 +550,13 @@
 }
 
 .footContLogoDiv {
-    margin-left: auto; /* 변경된 부분: 오른쪽 여백을 최대로 설정 */
+    width: 20%;
+    margin-left: auto;
 }
 
 .footContLogoImg {
-    width: 57px;
-    margin-left: 25px;
+    width: 55px;
+    margin-left: 4%;
 }
 
 
@@ -596,9 +579,9 @@
 
                 <div class="headermenuDiv2">
                 <div class="headermenu"><a href="">HOME</a></div>
-                <div class="headermenu"><a href="">ABOUT</a></div>
+                <div class="headermenu"><a href="about.html">ABOUT</a></div>
                 <div class="headermenu"><a href="">PRODUCT</a></div>
-                <div class="headermenu"><a href="">CV</a></div>
+                <div class="headermenu"><a href="">CATALOGUE</a></div>
             </div>
 
                 <div class="dropdown">
@@ -631,11 +614,12 @@
                     <li><img src="./image/f2.jpg" class="sliderImg"></li>
                     <li><img src="./image/f3.jpg" class="sliderImg"></li>
                 </ul>
+                <!--
                 <div class="bullets">
                     <label for="slide1">&nbsp;</label>
                     <label for="slide2">&nbsp;</label>
                     <label for="slide3">&nbsp;</label>
-                </div>
+                </div>-->
                 <div class="bullets1">
                     <label for="slide1">&nbsp;</label>
                     <label for="slide2">&nbsp;</label>
@@ -649,21 +633,8 @@
             </div>
 
         </div>
-
-        <div class="aboutDiv">
-
-        <div class="aboutDiv1">
-            <div class="aboutDiv1-1">
-                <a href="#"><img src="./image/f22.jpg" class="aboutImg"></a>
-            </div>
-            <div class="aboutDiv2">
-                <a href="#"><img src="./image/f22.jpg" class="aboutImg"></a>
-            </div>
-            <div class="aboutDiv2">
-                <a href="#"><img src="./image/f22.jpg" class="aboutImg"></a>
-            </div>
-        </div>
-
+        <div class="strongDiv">
+            <img src="./image/strong.png" class="strongImg">
         </div>
 
         <div class="sigProdTitleDiv">SIGNATURE PRODUCT</div>
@@ -697,6 +668,8 @@
         <div class="footer">
             <div><img src="./image/LOGO(3D).png" class="footLogoImg"></div>
             <div class="footLogoText">SPORTS & OUTDOORS INC.<br><span>MADE IN KOREA</span></div>
+            <div class="footLogoText" style="margin-left: 10%;">C.E.O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAUL MA<br><span>info@harangsports.com</span></div>
+            <div class="footLogoText">PH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;917.780.5208<br><span>www.harangsports.com</span></div>
             <div class="footContLogoDiv">
                 <a href=""><img src="./image/icon1.png" class="footContLogoImg"></a>
                 <a href=""><img src="./image/EMAIL.png" class="footContLogoImg"></a>
