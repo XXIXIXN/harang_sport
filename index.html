@@ -34,8 +34,13 @@
                 font-weight: normal;
                 font-style: normal;
             }
-
+html {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
             body {
+                width: 100%;
     margin: 0;
     padding: 0;
     background-color: black;
@@ -215,6 +220,7 @@
                 color: white;
                 font-size: 45px;
                 margin-left: 60px;
+                margin-right: 60px;
                 margin-top: 100px;
                 animation-name: slogan-ani;
                 animation-duration: 1.9s;
@@ -394,17 +400,20 @@
     color: white;
     font-size: 40px;
     margin-left: 100px;
+    margin-right: 100px;
 }
 
 .sigProdDiv {
     display: flex;
     margin-top: 30px;
     margin-left: 100px; /* 원하는 픽셀값으로 조절 */
+    margin-right: 100px;
 }
 
 .sigProdDiv > div {
     flex: 1;
-    margin-right: 5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 .sigProdImg {
@@ -541,7 +550,8 @@
 }
 
 .footContLogoDiv {
-    width: 20%;
+    display: flex;
+    width: 17%;
     margin-left: auto;
     text-align: right;
     margin-right: 1%;
@@ -549,7 +559,9 @@
 
 .footContLogoImg {
     width: 55px;
-    margin-left: 4%;
+}
+.footContLogoImgDiv {
+  margin-left: 10px;
 }
 .footCopyText {
     font-family: 'Pretendard-Regular';
@@ -579,9 +591,9 @@
                 </div>
 
                 <div class="headermenuDiv2">
-                    <div class="headermenu"><a href="">HOME</a></div>
+                    <div class="headermenu"><a href="index.html">HOME</a></div>
                     <div class="headermenu"><a href="about.html">ABOUT</a></div>
-                    <div class="headermenu"><a href="">PRODUCT</a></div>
+                    <div class="headermenu"><a href="product.html">PRODUCT</a></div>
                     <div class="headermenu"><a href="">CATALOGUE</a></div>
                 </div>
 
@@ -640,19 +652,19 @@
         <div class="sigProdTitleDiv">SIGNATURE PRODUCT</div>
         <div class="sigProdDiv">
             <div class="sigProdDiv1">
-                <a href="#"><img src="./image/f11.jpg" class="sigProdImg"></a><br><br>
+                <a href="#"><img src="./image/ITEM 1.png" class="sigProdImg"></a><br><br>
                 <span class="sigProdSpan1">OCTOPUS HOOK</span><br>
                 <span class="sigProdSpan2">NS BLACK 25PK</span><br><br>
                 <span class="sigProdSpan3">PRICE CODE</span>
             </div>
             <div class="sigProdDiv2">
-                <a href="#"><img src="./image/f22.jpg" class="sigProdImg"></a><br><br>
+                <a href="#"><img src="./image/ITEM 2.png" class="sigProdImg"></a><br><br>
                 <span class="sigProdSpan1">BAITHOLDER</span><br>
                 <span class="sigProdSpan2">NS BLACK 25PK</span><br><br>
                 <span class="sigProdSpan3">PRICE CODE</span>
             </div>
             <div class="sigProdDiv3">
-                <a href="#"><img src="./image/f33.jpg" class="sigProdImg"></a><br><br>
+                <a href="#"><img src="./image/ITEM 3.png" class="sigProdImg"></a><br><br>
                 <span class="sigProdSpan1">K-BRAID</span><br>
                 <span class="sigProdSpan2">15&nbsp;&nbsp;&nbsp;20&nbsp;&nbsp;&nbsp;30&nbsp;&nbsp;&nbsp;40&nbsp;&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;65&nbsp;&nbsp;&nbsp;80&nbsp;&nbsp;&nbsp;LBS</span><br><br>
                 <span class="sigProdSpan3">PRICE CODE</span>
@@ -668,14 +680,14 @@
         <div class="footer">
             <div class="footer1-1">
             <div><img src="./image/LOGO(3D).png" class="footLogoImg"></div>
-            <div class="footLogoText">SPORTS & OUTDOORS INC.<br><span>MADE IN KOREA</span></div>
+            <div class="footLogoText">SPORTS&nbsp;&&nbsp;OUTDOORS&nbsp;INC.<br><span>MADE IN KOREA</span></div>
             <div class="footLogoText" style="margin-left: 10%;">C.E.O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAUL MA<br><span>info@harangsports.com</span></div>
             <div class="footLogoText">PH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;917.780.5208<br><span>www.harangsports.com</span></div>
             <div class="footContLogoDiv">
-                <a href=""><img src="./image/icon1.png" class="footContLogoImg"></a>
-                <a href=""><img src="./image/EMAIL.png" class="footContLogoImg"></a>
-                <a href=""><img src="./image/INSTAGRAM.png" class="footContLogoImg"></a>
-                <a href=""><img src="./image/YOUTUBE.png" class="footContLogoImg"></a>
+                <div class="footContLogoImgDiv"><a href=""><img src="./image/icon1.png" class="footContLogoImg"></a></div>
+                <div class="footContLogoImgDiv"><a href=""><img src="./image/EMAIL.png" class="footContLogoImg"></a></div>
+                <div class="footContLogoImgDiv"><a href=""><img src="./image/INSTAGRAM.png" class="footContLogoImg"></a></div>
+                <div class="footContLogoImgDiv"><a href=""><img src="./image/YOUTUBE.png" class="footContLogoImg"></a></div>
             </div>
             </div>
             <div class = "footCopyText">COPYRIGHT 2024 HARANG INC. ALL RIGHTS RESERVED</div>
