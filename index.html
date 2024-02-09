@@ -135,20 +135,15 @@
                 100% { transform: translate(px, 0px); opacity: 1; }
             }
 
-            .head {
+
+.header {
+    background-color: black;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: black;
-    height: 120px;
+    height: 110px;
     position: fixed;
-}
-
-.header {
-    margin-top: 50px;
-    margin-left: -50px;
-    height: 22px;
     color: white;
     display: flex;
     font-family: 'Pretendard-Regular';
@@ -159,17 +154,20 @@
 .headerMenuDiv {
     width: 100%;
     display: flex;
-    margin-left: 10%; /* 변경된 부분: 40%에서 10%로 수정 */
-    margin-right: 15%;
+    margin-left: 4%; /* 변경된 부분: 40%에서 10%로 수정 */
+    margin-right: 5%;
+    margin-top: 40px;
 }
 .headermenuDiv2 {
     width: 100%;
+    margin-left: 45%;
+    margin-right: 5%;
     display: flex;
 }
 
 .headermenu {
     width: 50px;
-    margin-left: 10%; /* 변경된 부분: 70px에서 20px로 수정 */
+    margin-left: 90px; /* 변경된 부분: 70px에서 20px로 수정 */
 }
             .headermenu:hover {
                 font-family: 'Pretendard-ExtraBold';
@@ -178,12 +176,12 @@
             }
             
             .dropbtn {
-                margin-left: 10%;
-                border: 1px solid white;
                 cursor: pointer;
+                display: flex;
             }
             .dropdown {
                 display: inline-block;
+                margin-left: 30px;
             }
 
             .dropdown-content {
@@ -208,15 +206,8 @@
             .dropdown:hover .dropdown-content {
                 display: block;
             }
-
-            .lanmenu {
-                margin-left: -30%;
-            }
 .GlobeImg {
     width: 23px;
-    position: absolute;
-    margin-left: 80%; /* 변경된 부분: 왼쪽 여백을 90%로 조정 */
-    margin-right: 30px;
 }
 
             .sloganDiv {
@@ -527,14 +518,14 @@
 .footer {
     margin-top: 90px;
     width: 100%; /* 변경된 부분: 너비를 100%로 설정 */
-    max-width: 1650px; /* 변경된 부분: 최대 너비 설정 */
     height: 140px;
     color: white;
-    display: flex;
     box-sizing: border-box; /* 변경된 부분: padding이 너비에 포함되도록 box-sizing 설정 */
     padding: 0 20px; /* 변경된 부분: 양쪽 여백을 주기 위한 padding 추가 */
 }
-
+.footer1-1 {
+    display: flex;
+}
 .footLogoImg {
     margin-left: 60px;
 }
@@ -542,7 +533,7 @@
 .footLogoText {
     font-family: 'Pretendard-Regular';
     margin-top: 18px;
-    margin-left: 10px;
+    margin-left: 40px;
 }
 
 .footLogoText > span {
@@ -552,11 +543,20 @@
 .footContLogoDiv {
     width: 20%;
     margin-left: auto;
+    text-align: right;
+    margin-right: 1%;
 }
 
 .footContLogoImg {
     width: 55px;
     margin-left: 4%;
+}
+.footCopyText {
+    font-family: 'Pretendard-Regular';
+    color: white;
+    text-align: right;
+    width: 99%;
+    margin-top: 20px;
 }
 
 
@@ -565,37 +565,37 @@
         <title>Harang Sports</title>
     </head>
     <body>
-        <div class="head">
         <div class="header">
             <div class="headerMenuDiv">
                 <div class="logo-ani_div1">
+                    <a href="">
                     <img src="./image/h.png" class="logo_h">
                     <img src="./image/a.png" class="logo_a1">
                     <img src="./image/r.png" class="logo_r">
                     <img src="./image/a.png" class="logo_a2">
                     <img src="./image/n.png" class="logo_n">
                     <img src="./image/g.png" class="logo_g">
+                    </a>
                 </div>
 
                 <div class="headermenuDiv2">
-                <div class="headermenu"><a href="">HOME</a></div>
-                <div class="headermenu"><a href="about.html">ABOUT</a></div>
-                <div class="headermenu"><a href="">PRODUCT</a></div>
-                <div class="headermenu"><a href="">CATALOGUE</a></div>
-            </div>
+                    <div class="headermenu"><a href="">HOME</a></div>
+                    <div class="headermenu"><a href="about.html">ABOUT</a></div>
+                    <div class="headermenu"><a href="">PRODUCT</a></div>
+                    <div class="headermenu"><a href="">CATALOGUE</a></div>
+                </div>
 
                 <div class="dropdown">
-                    <div class="dropbtn" onclick="dropbtn()">Language</div>
+                    <div class="dropbtn" onclick="dropbtn()"><span style="margin-right: 10px;">Language</span><img src="./image/Globe.png" class="GlobeImg"></div>
                         <div class="dropdown-content">
                             <a href="#">English</a>
                             <a href="#">Español</a>
                             <a href="#">한국어</a>
                         </div>
                 </div>
-                <img src="./image/Globe.png" class="GlobeImg">
             </div>
         </div>
-        </div>
+
         <div class="logo-ani_div">
             <div class="sloganDiv">
                 <div class="sloganDiv1">PREMIUM SPORTS VALUE</div>
@@ -634,27 +634,27 @@
 
         </div>
         <div class="strongDiv">
-            <img src="./image/strong.png" class="strongImg">
+            <img src="./image/D-1.png" class="strongImg">
         </div>
 
         <div class="sigProdTitleDiv">SIGNATURE PRODUCT</div>
         <div class="sigProdDiv">
             <div class="sigProdDiv1">
                 <a href="#"><img src="./image/f11.jpg" class="sigProdImg"></a><br><br>
-                <span class="sigProdSpan1">ITEM 1</span><br>
-                <span class="sigProdSpan2">Type Description</span><br><br>
+                <span class="sigProdSpan1">OCTOPUS HOOK</span><br>
+                <span class="sigProdSpan2">NS BLACK 25PK</span><br><br>
                 <span class="sigProdSpan3">PRICE CODE</span>
             </div>
             <div class="sigProdDiv2">
                 <a href="#"><img src="./image/f22.jpg" class="sigProdImg"></a><br><br>
-                <span class="sigProdSpan1">ITEM 2</span><br>
-                <span class="sigProdSpan2">Type Description</span><br><br>
+                <span class="sigProdSpan1">BAITHOLDER</span><br>
+                <span class="sigProdSpan2">NS BLACK 25PK</span><br><br>
                 <span class="sigProdSpan3">PRICE CODE</span>
             </div>
             <div class="sigProdDiv3">
                 <a href="#"><img src="./image/f33.jpg" class="sigProdImg"></a><br><br>
-                <span class="sigProdSpan1">ITEM 3</span><br>
-                <span class="sigProdSpan2">Type Description</span><br><br>
+                <span class="sigProdSpan1">K-BRAID</span><br>
+                <span class="sigProdSpan2">15&nbsp;&nbsp;&nbsp;20&nbsp;&nbsp;&nbsp;30&nbsp;&nbsp;&nbsp;40&nbsp;&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;65&nbsp;&nbsp;&nbsp;80&nbsp;&nbsp;&nbsp;LBS</span><br><br>
                 <span class="sigProdSpan3">PRICE CODE</span>
             </div>
         </div>
@@ -666,6 +666,7 @@
         </div>
 
         <div class="footer">
+            <div class="footer1-1">
             <div><img src="./image/LOGO(3D).png" class="footLogoImg"></div>
             <div class="footLogoText">SPORTS & OUTDOORS INC.<br><span>MADE IN KOREA</span></div>
             <div class="footLogoText" style="margin-left: 10%;">C.E.O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAUL MA<br><span>info@harangsports.com</span></div>
@@ -676,8 +677,9 @@
                 <a href=""><img src="./image/INSTAGRAM.png" class="footContLogoImg"></a>
                 <a href=""><img src="./image/YOUTUBE.png" class="footContLogoImg"></a>
             </div>
+            </div>
+            <div class = "footCopyText">COPYRIGHT 2024 HARANG INC. ALL RIGHTS RESERVED</div>
         </div>
-
         <script>
 
             function changeSlide() {
