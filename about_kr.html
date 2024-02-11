@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+ 
+            @font-face {
+                font-family: 'Pretendard-Regular';
+                src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+                font-weight: 300;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Pretendard-ExtraBold';
+                src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+                font-weight: 800;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'GmarketSansMedium';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'GmarketSansBold';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'GmarketSansLight';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+html {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+            body {
+                width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.empty {
+    margin-top: 200px;
+    height: 500px;
+    color: white;
+    text-align: center;
+}
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+
+            .logo-ani_div1 {
+    display: block;
+    margin-top: -20px;
+    position: fixed; /* 고정 위치로 설정 */
+}
+
+
+            .logo-ani_div {
+                padding-top: 70px;
+                height: 50px;
+                display: block;
+            }
+
+            @keyframes logo-ani_h {
+                0% { transform: translate(-140px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_h {
+                width: 40px;
+                animation-name: logo-ani_h;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_a1 {
+                0% { transform: translate(-90px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_a1 {
+                width: 40px;
+                animation-name: logo-ani_a1;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_r {
+                0% { transform: translate(-40px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_r {
+                width: 31px;
+                animation-name: logo-ani_r;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_a2 {
+                0% { transform: translate(0, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; }
+            }
+            .logo_a2 {
+                width: 40px;
+                animation-name: logo-ani_a2;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_n {
+                0% { transform: translate(+55px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_n {
+                width: 40px;
+                animation-name: logo-ani_n;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes logo-ani_g {
+                0% { transform: translate(+100px, 0); opacity: 0; -webkit-filter: blur(8px); filter: blur(8px); }
+                100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
+            }
+            .logo_g {
+                width: 40px;
+                position: absolute;
+                padding-left: 5px;
+                padding-top: 26px;
+                animation-name: logo-ani_g;
+                animation-duration: 1.3s;
+            }
+
+            @keyframes slogan-ani {
+                0% { transform: translate(+100px, 0); opacity: 0; }
+                50% { transform: translate(+100px, 0); opacity: 0; }
+                100% { transform: translate(px, 0px); opacity: 1; }
+            }
+
+
+.header {
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 110px;
+    position: fixed;
+    color: white;
+    display: flex;
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+.headerMenuDiv {
+    width: 100%;
+    display: flex;
+    margin-left: 4%; /* 변경된 부분: 40%에서 10%로 수정 */
+    margin-right: 5%;
+    margin-top: 40px;
+}
+.headermenuDiv2 {
+    width: 100%;
+    margin-left: 45%;
+    margin-right: 5%;
+    display: flex;
+}
+
+.headermenu {
+    width: 50px;
+    margin-left: 90px; /* 변경된 부분: 70px에서 20px로 수정 */
+}
+            .headermenu:hover {
+                font-family: 'Pretendard-ExtraBold';
+                text-decoration: underline 2px;
+                text-underline-position : under;
+            }
+            
+            .dropbtn {
+                cursor: pointer;
+                display: flex;
+            }
+            .dropdown {
+                display: inline-block;
+                margin-left: 30px;
+            }
+
+            .dropdown-content {
+                margin-top: 8px;
+                font-size: 12px;
+                text-align: center; 
+                display: none;
+                background-color: #f9f9f9;
+                min-width: 112px;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 7px 15px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+                font-family: 'Pretendard-ExtraBold';
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+.GlobeImg {
+    width: 23px;
+}
+
+            .sloganDiv {
+                font-family: 'GmarketSansMedium';
+                color: white;
+                font-size: 45px;
+                margin-left: 60px;
+                margin-right: 60px;
+                margin-top: 100px;
+                animation-name: slogan-ani;
+                animation-duration: 1.9s;
+            }
+            .sloganDiv1 {
+                font-family: 'GmarketSansBold';
+            }
+            .sloganDiv2 {
+                margin-top: 8px;
+                font-size: 30px;
+            }
+
+           
+            .prod_sigProdTitleDiv {
+    font-family: 'GmarketSansBold';
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+.prod_sigProdMadeTextDiv {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sigProdDiv {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 100px; /* 원하는 픽셀값으로 조절 */
+    margin-right: 100px;
+}
+
+.sigProdDiv > div {
+    flex: 1;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    text-align: center;
+}
+
+.sigProdImg {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    opacity: 50%;
+    margin: 0 auto;
+}
+.sigProdText {
+    color: white;
+    z-index: 2;
+    position: absolute;
+    border: 1px solid white;
+    
+}
+.sigProdDiv1 {
+    text-align: center;
+}
+
+
+
+            .sigProdSpan1, .sigProdSpan2 {
+                text-align: left;
+                color: white;
+            }
+            .sigProdSpan1 {
+                font-family: 'Pretendard-ExtraBold';
+            }
+            .sigProdSpan2 {
+                font-family: 'Pretendard-Regular';
+            }
+            .sigProdSpan3 {
+                font-family: 'Pretendard-Regular';
+                color: #ffed28;
+            }
+            .sigProdDiv1 a:hover img {
+                opacity: 100;
+                -webkit-transition: .2s ease-in-out;
+	            transition: .2s ease-in-out;
+            }
+            .sigProdDiv2 a:hover img {
+                opacity: 100;
+                -webkit-transition: .2s ease-in-out;
+	            transition: .2s ease-in-out;
+            }
+            .sigProdDiv3 a:hover img {
+                opacity: 100;
+                -webkit-transition: .2s ease-in-out;
+	            transition: .2s ease-in-out;
+            }
+
+            .mailContactDiv {
+    width: 100%;
+    height: 560px;
+    overflow: hidden; /* 변경된 부분: overflow 값을 hidden으로 재설정 */
+    display: flex;
+    align-items: center;
+    position: relative; /* 부모 요소에 position 추가 */
+}
+
+.prod_img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.prod_img1 {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.footer {
+    margin-top: 90px;
+    width: 100%; /* 변경된 부분: 너비를 100%로 설정 */
+    height: 140px;
+    color: white;
+    box-sizing: border-box; /* 변경된 부분: padding이 너비에 포함되도록 box-sizing 설정 */
+    padding: 0 20px; /* 변경된 부분: 양쪽 여백을 주기 위한 padding 추가 */
+}
+.footer1-1 {
+    display: flex;
+}
+.footLogoImg {
+    margin-left: 60px;
+}
+
+.footLogoText {
+    font-family: 'Pretendard-Regular';
+    margin-top: 18px;
+    margin-left: 40px;
+}
+
+.footLogoText > span {
+    font-family: 'Pretendard-ExtraBold';
+}
+
+.footContLogoDiv {
+    display: flex;
+    width: 17%;
+    margin-left: auto;
+    text-align: right;
+    margin-right: 1%;
+}
+
+.footContLogoImg {
+    width: 55px;
+}
+.footContLogoImgDiv {
+  margin-left: 10px;
+}
+.footCopyText {
+    font-family: 'Pretendard-Regular';
+    color: white;
+    text-align: right;
+    width: 99%;
+    margin-top: 20px;
+}
+
+
+
+        </style>
+        <title>Harang Sports</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="headerMenuDiv">
+                <div class="logo-ani_div1">
+                    <a href="index_kr.html">
+                    <img src="./image/h.png" class="logo_h">
+                    <img src="./image/a.png" class="logo_a1">
+                    <img src="./image/r.png" class="logo_r">
+                    <img src="./image/a.png" class="logo_a2">
+                    <img src="./image/n.png" class="logo_n">
+                    <img src="./image/g.png" class="logo_g">
+                    </a>
+                </div>
+
+                <div class="headermenuDiv2">
+                    <div class="headermenu"><a href="index_kr.html">HOME</a></div>
+                    <div class="headermenu"><a href="about_kr.html">ABOUT</a></div>
+                    <div class="headermenu"><a href="product_kr.html">PRODUCT</a></div>
+                    <div class="headermenu"><a href="./catalogue/Harang Catalogue ver.1 (2024-02-10).pdf" download="Harang Catalogue ver.1">CATALOGUE</a></div>
+                </div>
+
+                <div class="dropdown">
+                    <div class="dropbtn" onclick="dropbtn()"><span style="margin-right: 10px;">Language</span><img src="./image/Globe.png" class="GlobeImg"></div>
+                        <div class="dropdown-content">
+                            <a href="#">English</a>
+                            <a href="#">Español</a>
+                            <a href="#">한국어</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mailContactDiv">
+            <img src="./image/prod_img_about.png" class="prod_img">
+        </div>
+
+        <div class="mailContactDiv">
+          <img src="./image/ver.3.png" class="prod_img1">
+      </div>
+
+
+        <div class="empty">developing</div>
+
+        <div class="footer">
+            <div class="footer1-1">
+            <div><img src="./image/LOGO(3D).png" class="footLogoImg"></div>
+            <div class="footLogoText">SPORTS&nbsp;&&nbsp;OUTDOORS&nbsp;INC.<br><span>MADE IN KOREA</span></div>
+            <div class="footLogoText" style="margin-left: 10%;">C.E.O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAUL MA<br><span>info@harangsports.com</span></div>
+            <div class="footLogoText">PH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;917.780.5208<br><span>www.harangsports.com</span></div>
+            <div class="footContLogoDiv">
+                <div class="footContLogoImgDiv"><a href=""><img src="./image/icon1.png" class="footContLogoImg"></a></div>
+                <div class="footContLogoImgDiv"><a href=""><img src="./image/EMAIL.png" class="footContLogoImg"></a></div>
+                <div class="footContLogoImgDiv"><a href=""><img src="./image/INSTAGRAM.png" class="footContLogoImg"></a></div>
+                <div class="footContLogoImgDiv"><a href=""><img src="./image/YOUTUBE.png" class="footContLogoImg"></a></div>
+            </div>
+            </div>
+            <div class = "footCopyText">COPYRIGHT 2024 HARANG INC. ALL RIGHTS RESERVED</div>
+        </div>
+        <script>
+
+            function changeSlide() {
+                const radios = document.getElementsByName("slide");
+                let currentIndex = Array.from(radios).findIndex(radio => radio.checked);
+                currentIndex = (currentIndex + 1) % radios.length;
+                radios[currentIndex].checked = true;
+            }
+
+            setInterval(changeSlide, 5000); // Change slide every 3 seconds
+
+            function dropbtn() {
+                $(".dropdown-content").show();
+            }
+
+        </script>
+
+    </body>
+
+</html>
