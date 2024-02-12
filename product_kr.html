@@ -265,10 +265,14 @@ html {
     height: auto;
     max-width: 100%;
     aspect-ratio: 1 / 1;
-    opacity: 50%;
     margin: 0 auto;
-    cursor:pointer
+    cursor:pointer;
+    transition: opacity 0.3s ease;
 }
+.sigProdImg:hover {
+    opacity: 0.5; /* 마우스 오버 시 투명도를 50%로 설정 */
+}
+
 .sigProdText {
     color: white;
     z-index: 2;
@@ -378,6 +382,16 @@ html {
     color: #ffed28;
 }
 
+.lineImg2 {
+    width: 87%;
+    margin-left: 110px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.empty1 {
+    margin-top: 300px;
+}
 
 .footer {
     margin-top: 90px;
@@ -471,13 +485,13 @@ html {
         <div class="prod_sigProdTitleDiv">SIGNATURE PRODUCT</div>
         <div class="sigProdDiv">
             <div class="sigProdDiv1">
-                <a><img src="./image/HOOK.png" class="sigProdImg" onclick="scrollToOctoProdTitleDiv1()"></a><br><br>
+                <a><img src="./image/HOOK_.png" class="sigProdImg" onclick="scrollToOctoProdTitleDiv1()" onMouseOver="changeImage1(this)" onMouseOut="restoreImage1(this)"></a><br><br>
             </div>
             <div class="sigProdDiv2">
-                <a><img src="./image/MONOLINE.png" class="sigProdImg"  onclick="scrollToOctoProdTitleDiv2()"></a><br><br>
+                <a><img src="./image/MONILINE_.png" class="sigProdImg"  onclick="scrollToOctoProdTitleDiv2()" onMouseOver="changeImage2(this)" onMouseOut="restoreImage2(this)"></a><br><br>
             </div>
             <div class="sigProdDiv3">
-                <a><img src="./image/BRAID.png" class="sigProdImg" onclick="scrollToOctoProdTitleDiv3()"></a><br><br>
+                <a><img src="./image/BRAID_.png" class="sigProdImg" onclick="scrollToOctoProdTitleDiv3()" onMouseOver="changeImage3(this)" onMouseOut="restoreImage3(this)"></a><br><br>
             </div>
         </div>
 
@@ -590,6 +604,8 @@ html {
         </div>
     </div>
 
+    <div><img src="./image/line2.png" class="lineImg2"></div>
+
     <div class="ProdMainDiv2">
         <div class="holdProdTitleDiv"><div class="octoProdMainTitle">BAITHOLDER</div><br>자세한 설명을 작성해 주세요.</div>
         <div class="octoProdDiv">
@@ -675,6 +691,8 @@ html {
         </div>
     </div>
 
+    <div><img src="./image/line2.png" class="lineImg2"></div>
+
     <div class="ProdMainDiv3">
         <div class="kbrProdTitleDiv"><div class="octoProdMainTitle">K-BRAID</div><br>자세한 설명을 작성해 주세요.</div>
         <div class="octoProdDiv">
@@ -728,7 +746,7 @@ html {
         </div>
     </div>
 
-        <div class="empty">developing</div>
+        <div class="empty1"></div>
 
         <div class="footer">
             <div class="footer1-1">
@@ -774,6 +792,39 @@ html {
             var octoProdTitleDiv = document.querySelector('.ProdMainDiv3');
             octoProdTitleDiv.scrollIntoView({ behavior: 'smooth' });
             }
+
+            function changeImage1(img) {
+                img.setAttribute("data-original-src", img.src);
+            // 이미지 경로를 변경합니다. 원하는 새로운 이미지 경로로 바꿔주세요.
+            img.src = "./image/HOOK.png";
+        }
+
+        function restoreImage1(img) {
+            // 기존의 이미지 경로를 복원
+            img.src = img.getAttribute("data-original-src");
+        }
+
+        function changeImage2(img) {
+                img.setAttribute("data-original-src", img.src);
+            // 이미지 경로를 변경합니다. 원하는 새로운 이미지 경로로 바꿔주세요.
+            img.src = "./image/MONOLINE.png";
+        }
+
+        function restoreImage2(img) {
+            // 기존의 이미지 경로를 복원
+            img.src = img.getAttribute("data-original-src");
+        }
+
+        function changeImage3(img) {
+                img.setAttribute("data-original-src", img.src);
+            // 이미지 경로를 변경합니다. 원하는 새로운 이미지 경로로 바꿔주세요.
+            img.src = "./image/BRAID.png";
+        }
+
+        function restoreImage3(img) {
+            // 기존의 이미지 경로를 복원
+            img.src = img.getAttribute("data-original-src");
+        }
 
         </script>
 

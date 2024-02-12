@@ -319,6 +319,15 @@ html {
     align-items: center;
     position: relative; /* 부모 요소에 position 추가 */
 }
+.mailContactDiv1 {
+    width: 100%;
+    height: 560px;
+    overflow: hidden; /* 변경된 부분: overflow 값을 hidden으로 재설정 */
+    display: flex;
+    align-items: center;
+    position: relative; /* 부모 요소에 position 추가 */
+    margin-bottom: 100px;
+}
 
 .prod_img {
     object-fit: cover;
@@ -335,6 +344,36 @@ html {
     display: block;
     position: absolute;
     z-index: 1;
+}
+
+.HeadCopyDiv {
+    color: white;
+    display: flex;
+    margin-left: 110px;
+    margin-bottom: 20px;
+}
+.NumberTitleDiv {
+    margin-right: 80px;
+    margin-top: 10px;
+}
+.HeadCopyTitleDiv {
+    display: block;
+    font-size: 40px;
+}
+.HeadCopy {
+    font-family: 'GmarketSansBold';
+}
+.SubCopy {
+    font-family: 'GmarketSansLight';
+}
+.lineImg1 {
+    width: 45%;
+    margin-left: 110px;
+    margin-bottom: 60px;
+}
+
+.empty1 {
+    margin-top: 300px;
 }
 
 
@@ -426,12 +465,37 @@ html {
             <img src="./image/prod_img_about.png" class="prod_img">
         </div>
 
-        <div class="mailContactDiv">
+        <div class="mailContactDiv1">
           <img src="./image/ver.3.png" class="prod_img1">
       </div>
 
+        <div class="HeadCopyDiv">
+            <div class="NumberTitleDiv">01</div>
+            <div class="HeadCopyTitleDiv">
+                <div class="HeadCopy">HEAD COPY</div>
+                <div class="SubCopy">SUB COPY & BODY COPY</div>
+            </div>
+        </div>
+        <div><img src="./image/line2.png" class="lineImg1"></div>
 
-        <div class="empty">developing</div>
+        <div class="HeadCopyDiv">
+            <div class="NumberTitleDiv">02</div>
+            <div class="HeadCopyTitleDiv">
+                <div class="HeadCopy">HEAD COPY</div>
+                <div class="SubCopy">SUB COPY & BODY COPY</div>
+            </div>
+        </div>
+        <div><img src="./image/line2.png" class="lineImg1"></div>
+
+        <div class="HeadCopyDiv">
+            <div class="NumberTitleDiv">03</div>
+            <div class="HeadCopyTitleDiv">
+                <div class="HeadCopy">HEAD COPY</div>
+                <div class="SubCopy">SUB COPY & BODY COPY</div>
+            </div>
+        </div>
+
+        <div class="empty1"></div>
 
         <div class="footer">
             <div class="footer1-1">
