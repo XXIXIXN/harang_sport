@@ -536,6 +536,16 @@
                 margin-top: 18px;
                 margin-left: 10%;
             }
+            .footLogoTextDiv1 {
+                display: flex;
+            }
+            .footLogoTextDiv2 {
+                display: flex;
+                margin-right: 50px;
+            }
+            .footLogoTextDiv3 {
+                display: flex;
+            }
 
             .footLogoText > span {
                 font-family: 'Pretendard-ExtraBold';
@@ -568,28 +578,34 @@
 
 @media screen and (max-width: 768px){ 
 
-.header {
-    background-color: black;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    height: 70px;
-    position: fixed;
-    color: white;
-    display: flex;
-    justify-items: flex-start;
-    font-family: 'Pretendard-Regular';
-    font-size: 13px;
-}
-
-.dropbtn {
+            .header {
+                background-color: black;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+                height: 70px;
+                position: fixed;
+                color: white;
+                display: flex;
+                justify-items: flex-start;
+                font-family: 'Pretendard-Regular';
+                font-size: 13px;
+            }
+            .headerMenuDiv {
+                width: 100%;
+                display: flex;
+                justify-items: flex-start;
+            }
+            .dropbtn {
                 cursor: pointer;
                 display: flex;
-                align-items: center;
             }
             .dropdown {
                 display: inline-block;
+                margin-left: auto;
+                margin-top: 30px;
+                margin-right: 20px;
             }
 
             .dropdown-content {
@@ -598,7 +614,7 @@
                 text-align: center; 
                 display: none;
                 background-color: #f9f9f9;
-                min-width: 112px;
+                min-width: 80px;
             }
             .dropdown-content a {
                 color: black;
@@ -615,15 +631,16 @@
                 display: block;
             }
             .GlobeImg {
-                width: 23px;
+                width: 16px;
             }
 
 .logo-ani_div1 {
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 .logo-ani_div {
-    padding-top: 70px;
+    padding-top: 40px;
     height: 50px;
     display: block;
 }
@@ -880,17 +897,22 @@
                 font-family: 'Pretendard-Regular';
                 margin-top: 90px;
                 width: 100%; /* 변경된 부분: 너비를 100%로 설정 */
-                height: 140px;
+                height: 80px;
                 color: white;
                 box-sizing: border-box; /* 변경된 부분: padding이 너비에 포함되도록 box-sizing 설정 */
                 padding: 0 20px; /* 변경된 부분: 양쪽 여백을 주기 위한 padding 추가 */
                 font-size: 10px;
             }
+            .footer1-1 {
+                justify-items: flex-start;
+                width: 100%;
+            }
 
             .footContLogoDiv {
                 display: flex;
-                margin-left: auto;
                 margin-right: 1%;
+                text-align: right;
+                margin-left: auto;
             }
             .footLogoImg {
                 width: 100px;
@@ -906,13 +928,30 @@
             }
             .footLogoTextDiv2 {
                 display: flex;
+                justify-self: flex-start;
                 text-align: right;
             }
             .footLogoTextDiv2 > div > img {
                 margin-top: -7px;
             }
             .footLogoTextDiv2 > .footLogoText {
+                margin-left: 10px;
+                text-align: left;
+            }
+            .footLogoTextDiv3 {
+                display: flex;
+            }
+            .footLogoTextDiv3 > .footLogoTextDiv1 {
+                margin-left: auto;
                 text-align: right;
+                margin-right: 10px;
+            }
+            .footLogoTextDiv1 > .footLogoText {
+                margin-left: 20px;
+            }
+            .footCopyText {
+                text-align: right;
+                margin-top: -20px;
             }
 }
 
@@ -1036,23 +1075,25 @@
         </div>
 
         <div class="footer">
-            <div class="footer1-1">
+        <div class="footer1-1">
+            <div class="footLogoTextDiv3">
                 <div class="footLogoTextDiv2">
-            <div><img src="./image/LOGO(3D).png" class="footLogoImg"></div>
-            <div class="footLogoText">SPORTS&nbsp;&&nbsp;OUTDOORS&nbsp;INC.<br><span>MADE IN KOREA</span></div>
-        </div>
-            <div class="footLogoTextDiv1">
-            <div class="footLogoText">C.E.O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAUL MA<br><span>info@harangsports.com</span></div>
-            <div class="footLogoText">PH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;917.780.5208<br><span>www.harangsports.com</span></div>
-        </div>
+                    <div><img src="./image/LOGO(3D).png" class="footLogoImg"></div>
+                    <div class="footLogoText">SPORTS&nbsp;&&nbsp;OUTDOORS&nbsp;INC.<br><span>MADE IN KOREA</span></div>
+                </div>
+                <div class="footLogoTextDiv1">
+                    <div class="footLogoText">C.E.O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAUL MA<br><span>info@harangsports.com</span></div>
+                    <div class="footLogoText">PH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;917.780.5208<br><span>www.harangsports.com</span></div>
+                </div>
+            </div>
             <div class="footContLogoDiv">
                 <div class="footContLogoImgDiv"><a href=""><img src="./image/icon1.png" class="footContLogoImg"></a></div>
                 <div class="footContLogoImgDiv"><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@harangsports.com" target="_blank"><img src="./image/EMAIL.png" class="footContLogoImg"></a></div>
                 <div class="footContLogoImgDiv"><a href="https://www.instagram.com" target="_blank"><img src="./image/INSTAGRAM.png" class="footContLogoImg"></a></div>
                 <div class="footContLogoImgDiv"><a href="https://www.youtube.com" target="_blank"><img src="./image/YOUTUBE.png" class="footContLogoImg"></a></div>
             </div>
-            </div>
-            <div class = "footCopyText">COPYRIGHT 2024 HARANG INC. ALL RIGHTS RESERVED</div>
+        </div>
+        <div class = "footCopyText">COPYRIGHT 2024 HARANG INC. ALL RIGHTS RESERVED</div>
         </div>
         <script>
 
