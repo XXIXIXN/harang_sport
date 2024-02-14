@@ -574,19 +574,53 @@
     left: 0;
     width: 100%;
     z-index: 100;
-    height: 110px;
+    height: 70px;
     position: fixed;
     color: white;
     display: flex;
+    justify-items: flex-start;
     font-family: 'Pretendard-Regular';
-    font-size: 18px;
-    justify-content: space-between;
+    font-size: 13px;
 }
 
+.dropbtn {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+            .dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                margin-top: 8px;
+                font-size: 12px;
+                text-align: center; 
+                display: none;
+                background-color: #f9f9f9;
+                min-width: 112px;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 7px 15px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+                font-family: 'Pretendard-ExtraBold';
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .GlobeImg {
+                width: 23px;
+            }
+
 .logo-ani_div1 {
-    display: block;
-    margin-top: -20px;
-    position: fixed; /* 고정 위치로 설정 */
+    margin-right: auto;
+    margin-top: 20px;
 }
 .logo-ani_div {
     padding-top: 70px;
@@ -599,7 +633,7 @@
     100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
 }
 .logo_h {
-    width: 40px;
+    width: 20px;
     animation-name: logo-ani_h;
     animation-duration: 1.3s;
 }
@@ -609,7 +643,7 @@
     100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
 }
 .logo_a1 {
-    width: 40px;
+    width: 20px;
     animation-name: logo-ani_a1;
     animation-duration: 1.3s;
 }
@@ -619,7 +653,7 @@
     100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
 }
 .logo_r {
-    width: 31px;
+    width: 16px;
     animation-name: logo-ani_r;
     animation-duration: 1.3s;
 }
@@ -629,7 +663,7 @@
     100% { transform: translate(0px, 0px); opacity: 1; }
 }
 .logo_a2 {
-    width: 40px;
+    width: 20px;
     animation-name: logo-ani_a2;
     animation-duration: 1.3s;
 }
@@ -639,7 +673,7 @@
     100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
 }
 .logo_n {
-    width: 40px;
+    width: 20px;
     animation-name: logo-ani_n;
     animation-duration: 1.3s;
 }
@@ -649,10 +683,10 @@
     100% { transform: translate(0px, 0px); opacity: 1; -webkit-filter: blur(0px); filter: blur(0px); }
 }
 .logo_g {
-    width: 40px;
+    width: 20px;
     position: absolute;
     padding-left: 5px;
-    padding-top: 26px;
+    padding-top: 12px;
     animation-name: logo-ani_g;
     animation-duration: 1.3s;
 }
@@ -662,13 +696,19 @@
                 100% { transform: translate(px, 0px); opacity: 1; }
             }
 
+.headermenuDiv2 {
+    display: none;
+}
+
+
+
 .sloganDiv {
                 font-family: 'GmarketSansMedium';
                 color: white;
-                font-size: 20px;
+                font-size: 17px;
                 margin-left: 30px;
                 margin-right: 60px;
-                margin-top: 100px;
+                margin-top: 50px;
                 animation-name: slogan-ani;
                 animation-duration: 1.9s;
             }
@@ -677,12 +717,12 @@
             }
             .sloganDiv2 {
                 margin-top: 8px;
-                font-size: 20px;
+                font-size: 15px;
             }
 
 .showcaseDiv {
                 width: 100%;
-                margin-top: 140px;
+                margin-top: 70px;
                 box-sizing: border-box;
                 padding: 0 20px 0 0;
             }
@@ -707,7 +747,7 @@
             ul.imgs{
                 display: flex;
                 justify-content: center;
-                height: 200px;
+                height: 140px;
             }
             ul.imgs li{
                 height: 200px;
@@ -715,34 +755,7 @@
                 opacity: 0; /* 체크한 라디오박스 순서의 슬라이드만 표시되도록 기본 투명도 설정 */
                 list-style: none;
             }
-            .bullets{
-                position: absolute;
-                left: 51%; /* 가로로 가운데 정렬 */
-                transform: translateX(-50%);
-                bottom: 10px; /* 슬라이드 밑에서 20px 간격 띄움 */
-                z-index: 2; /* 슬라이드 위에 보이도록 레이어 순위를 높임 */
-                width: 100%;
-            }
-            .bullets label{
-                position:relative;
-                display: inline-block; /* 한 줄로 불릿 나열*/
-                border-radius: 50%; /* 원형 불릿으로 처리 */
-                background-color: rgba(255, 255, 255, 0.55);
-                width: 10px; /* 불릿 너비 */
-                height: 10px; /* 불릿 높이 */
-                cursor: pointer;
-                margin-left: 15%;
-                margin-right: 15%;
-            }
-            .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
-                background-color: #fff;
-            }
-            .slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
-                background-color: #fff;
-            }
-            .slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
-                background-color: #fff;
-            }
+            
             .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
                 opacity: 1;
                 transition: 1s;
@@ -779,22 +792,41 @@
             .sigProdTitleDiv {
                 font-family: 'GmarketSansBold';
                 color: white;
-                font-size: 20px;
+                font-size: 17px;
                 margin-left: 40px;
                 margin-right: 100px;
             }
 
             .sigProdDiv {
+                font-size: 13px;
                 margin-top: 30px;
-                margin-left: 100px; /* 원하는 픽셀값으로 조절 */
-                margin-right: 100px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .sigProdDiv > div {
+                margin-bottom: 40px;
+            }
+            .sigProdSpan1, .sigProdSpan2 {
+                text-align: left;
+                color: white;
+            }
+            .sigProdSpan1 {
+                font-family: 'Pretendard-ExtraBold';
+            }
+            .sigProdSpan2 {
+                font-family: 'Pretendard-Regular';
+            }
+            .sigProdSpan3 {
+                font-family: 'Pretendard-Regular';
+                color: #ffed28;
             }
 
             .sigProdImg {
                 width: 100%;
                 height: auto;
-                max-width: 100%;
+                max-width: 130%;
                 aspect-ratio: 1 / 1;
+                margin-bottom: -10px;
             }
 
 
@@ -816,7 +848,7 @@
             }
 
             .contactTextImg {
-                width: 300px;
+                width: 50%;
                 position: absolute;
                 z-index: 2;
                 left: 50%;
@@ -824,8 +856,8 @@
                 transform: translate(-50%, -50%);
             }
             .contactBoxDiv {
-                width: 165px;
-                height: 30px;
+                width: 20%;
+                height: 20px;
                 border: 1px solid #ffed28;
                 border-radius: 80px 80px;
                 color: #ffed28;
@@ -837,7 +869,7 @@
                 transform: translate(-50%, -50%);
                 font-family: 'GmarketSansLight';
                 font-size: 8px;
-                line-height: 31px;
+                line-height : 20px;
             }
 
             .contactBoxDiv:hover {
@@ -845,18 +877,23 @@
             }
 
             .footer {
+                font-family: 'Pretendard-Regular';
                 margin-top: 90px;
                 width: 100%; /* 변경된 부분: 너비를 100%로 설정 */
                 height: 140px;
                 color: white;
                 box-sizing: border-box; /* 변경된 부분: padding이 너비에 포함되도록 box-sizing 설정 */
                 padding: 0 20px; /* 변경된 부분: 양쪽 여백을 주기 위한 padding 추가 */
+                font-size: 10px;
             }
 
             .footContLogoDiv {
                 display: flex;
                 margin-left: auto;
                 margin-right: 1%;
+            }
+            .footLogoImg {
+                width: 100px;
             }
             .footContLogoImg {
                 width: 35px;
@@ -867,15 +904,12 @@
             .footLogoTextDiv1 {
                 display: flex;
             }
-            .footLogoTextDiv1 > div {
-                margin-right: 40px;
-            }
             .footLogoTextDiv2 {
                 display: flex;
+                text-align: right;
             }
             .footLogoTextDiv2 > div > img {
-                margin-top: -20px;
-                margin-right: 50px;
+                margin-top: -7px;
             }
             .footLogoTextDiv2 > .footLogoText {
                 text-align: right;
