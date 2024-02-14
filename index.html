@@ -187,10 +187,6 @@
                 cursor: pointer;
                 display: flex;
             }
-            .dropdown {
-                display: inline-block;
-                margin-left: 30px;
-            }
 
             .dropdown-content {
                 margin-top: 8px;
@@ -575,8 +571,60 @@
 
 }
 
+.hamburger-menu {
+        display: none;
+    }
+/* 햄버거 메뉴 아이콘 스타일 */
+.hamburger-menu {
+    display: none;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
 
 @media screen and (max-width: 768px){ 
+
+
+    .hamburger-menu {
+        display: block; /* 화면 크기가 작을 때만 햄버거 메뉴 표시 */
+        position: absolute;
+        left: 20px;
+        top: -10px;
+        z-index: 1000;
+    }
+    .headermenuDiv2 {
+        display: none; /* 초기에는 드롭다운 메뉴 숨김 */
+        position: fixed;
+        top: 35px;
+        left: 0;
+        width: 100%;
+        background-color: #000000; /* 드롭다운 메뉴 배경색 */
+        padding: 10px 0;
+        z-index: 999;
+    }
+    .headermenuDiv2 .headermenu {
+        text-align: center;
+    }
+    .headermenuDiv2 .headermenu a {
+        display: block;
+        padding: 10px 0;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    .headermenuDiv2 .headermenu a:hover {
+        background-color: #555; /* 호버 시 배경색 변경 */
+    }
+
 
             .header {
                 background-color: black;
@@ -637,7 +685,7 @@
 .logo-ani_div1 {
     margin-right: auto;
     margin-top: 15px;
-    margin-left: 30px;
+    margin-left: 70px;
 }
 .logo-ani_div {
     padding-top: 40px;
@@ -912,14 +960,14 @@
                 display: flex;
                 margin-right: 1%;
                 text-align: right;
-                margin-left: auto;
+                margin-left: -10px;
                 margin-top: -20px;
             }
             .footLogoImg {
                 width: 100px;
             }
             .footContLogoImg {
-                width: 35px;
+                width: 27px;
             }
             .footContLogoImgDiv {
             margin-left: 10px;
@@ -961,7 +1009,7 @@
         <div class="header">
             <div class="headerMenuDiv">
                 <div class="logo-ani_div1">
-                    <a href="index_eng.html">
+                    <a href="index.html">
                     <img src="./image/h.png" class="logo_h">
                     <img src="./image/a.png" class="logo_a1">
                     <img src="./image/r.png" class="logo_r">
@@ -971,12 +1019,20 @@
                     </a>
                 </div>
 
-                <div class="headermenuDiv2">
-                    <div class="headermenu"><a href="index.html">HOME</a></div>
-                    <div class="headermenu"><a href="about_kr.html">ABOUT</a></div>
-                    <div class="headermenu"><a href="product_kr.html">PRODUCT</a></div>
-                    <div class="headermenu"><a href="./catalogue/Harang Catalogue ver.2 (2024-02-13).pdf" download="Harang Catalogue.pdf" target="_blank">CATALOGUE</a></div>
-                </div>
+                <!-- 햄버거 아이콘 추가 -->
+<div class="dropdown hamburger-menu" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
+<!-- 드롭다운 메뉴 추가 -->
+<div class="dropdown headermenuDiv2" id="headermenuDiv2">
+    <div class="headermenu"><a href="index.html">HOME</a></div>
+    <div class="headermenu"><a href="about_kr.html">ABOUT</a></div>
+    <div class="headermenu"><a href="product_kr.html">PRODUCT</a></div>
+    <div class="headermenu"><a href="./catalogue/Harang Catalogue ver.2 (2024-02-13).pdf" download="Harang Catalogue.pdf" target="_blank">CATALOGUE</a></div>
+</div>
 
                 <div class="dropdown">
                     <div class="dropbtn" onclick="dropbtn()"><span style="margin-right: 10px;">Language</span><img src="./image/Globe.png" class="GlobeImg"></div>
@@ -1165,6 +1221,11 @@
   container3.addEventListener('mouseleave', () => {
     image3.style.transform = 'scale(1)';
   });
+
+function toggleMenu() {
+    const menu = document.getElementById('headermenuDiv2');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
         </script>
 
     </body>
